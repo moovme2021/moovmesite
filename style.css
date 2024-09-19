@@ -1,0 +1,132 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #FF1188;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: #EE7922;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* ריווח עבור דפים שאינם דף הבית */
+body:not(.home) main {
+    padding: 20px;
+}
+
+body:not(.home) section {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* עיצוב רשת המשבצות */
+.lesson-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* יוצר משבצות רספונסיביות */
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 60px; 
+}
+
+@media (max-width: 768px) {
+    .lesson-grid {
+        grid-template-columns: repeat(2, 1fr); /* שתי עמודות במסכים בינוניים */
+    }
+}
+
+@media (max-width: 480px) {
+    .lesson-grid {
+        grid-template-columns: 1fr; /* עמודה אחת במסכים קטנים */
+    }
+}
+
+/* עיצוב משבצות השיעורים */
+.lesson-box {
+    background-color: #FF1188; /* צבע רקע ורוד */
+    color: black; /* צבע טקסט שחור */
+    padding: 20px;
+    border-radius: 10px; /* פינות מעוגלות */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* צל קל */
+    text-align: center; /* ממרכז את התוכן */
+}
+
+.lesson-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.lesson-box p {
+    font-size: 16px;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.image-gallery img {
+    width: auto; /* מאפשר התאמה רוחבית לתמונות */
+    max-width: 300px;
+    max-height: 300px; /* מגביל גובה מקסימלי */
+    object-fit: contain; /* שומר על יחס התמונה ללא חיתוך */
+}
